@@ -7,21 +7,18 @@
     <link rel="stylesheet" href="style.css" >
 </head>
 <body>
-    <h1>ndx_x</h1>
-    <button onclick="red()"><strong>RED</strong></button>
-    <button onclick="blue()"><strong>BLUE</strong></button>
-    <button onclick="white()"><strong>WHITE</strong></button>
+    <h1>UNIT CONVERTER</h1>
+    <input type="number" id="enteredValue" placeholder="Enter Value...">
+    <select id="conversionType">
+        <option value="" selected disabled>Select Convertion</option>
+        <option value="milesToKM">Miles To KM</option>
+        <option value="KMToMiles">KM To Miles</option>
+    </select>
     <br>
-    <button onclick="insta()"><strong>riyanikka</strong></button>
-    <button onclick="fb()"><strong>riyankakku</strong></button>
-    <button onclick="reset()"><strong>Pattalam revanth</strong></button>
+    <button id="convertFunction" onclick="convertIt()">convert</button>
     <br>
-    <h2>Secret msg for ikka</h2>
-    <button onclick="ikkushow()">show</button>
-    <button onclick="ikkuhide()">hide</button>
-    <p>ikkakka ikkukku riyan kaakku</p>
-    <br>
-    <img src="riyikka.jpg">
+    <h2>RESULT</h2>
+    <p id="resultValue"></p>
     <script src="script.js"></script>
 </body>
 </html>

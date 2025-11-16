@@ -1,33 +1,28 @@
-function red(){
-    document.body.style.backgroundColor= "red";
-}
+function convertIt(){
 
-function blue(){
-    document.body.style.backgroundColor= "blue";
-}
+  const valueToConvert = parseFloat(document.getElementById("enteredValue").value);
+  
+  const conversionType = document.getElementById("conversionType").value;
+  
+  
+  const resultElement = document.getElementById("resultValue");
+  
+  let result; 
 
-function white(){
-    document.body.style.backgroundColor= "white";
-}
+  if (isNaN(valueToConvert)) {
+    resultElement.innerHTML = "Please enter a valid number.";
+    return; 
+  }
 
-function insta(){
-    document.querySelector("h1").innerHTML="Ikka";
-}
-
-function fb(){
-    document.querySelector("h1").innerHTML="Riyan Kakku";
-}
-
-function reset(){
-    document.querySelector("h1").innerHTML="Pattalam Revanth";
-}
-
-function ikkuhide(){
-    document.getElementsByTagName("p")[0].style.display= "none";
-    document.querySelector("img").style.display="none";
-}
-
-function ikkushow(){
-    document.getElementsByTagName("p")[0].style.display= "block";
-    document.querySelector("img").style.display="block";
+  if (conversionType === "milesToKM") {
+    result = valueToConvert * 1.60934;
+    resultElement.innerHTML = valueToConvert + " miles is " + result.toFixed(2) + " kilometers.";
+  
+  } else if (conversionType === "KMToMiles") {
+    result = valueToConvert / 1.60934;
+    resultElement.innerHTML = valueToConvert + " km is " + result.toFixed(2) + " miles.";
+  
+  } else {
+    resultElement.innerHTML = "Please select a conversion type.";
+  }
 }
