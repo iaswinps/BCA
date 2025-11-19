@@ -37,3 +37,7 @@ function downloadNotesDBMS() {
 function downloadNotesCL() {
     window.location.href = "attendance.html";
 }
+
+function openNotes() {
+    window.location.href = "notes.html";
+}
