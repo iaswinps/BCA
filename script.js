@@ -21,3 +21,19 @@ function downloaddbms() {
 function downloadse() {
     window.open("syllabus/BCAS4SoftwareEngineeringSyllabus.pdf", "_blank");
 }
+
+function openAttendance() {
+    window.location.href = "attendance.html";
+}
+
+function downloadNotesSE() {
+    window.location.href = "attendance.html";
+}
+
+function downloadNotesDBMS() {
+    window.location.href = "attendance.html";
+}
+
+function downloadNotesCL() {
+    window.location.href = "attendance.html";
+}
