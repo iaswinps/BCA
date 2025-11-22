@@ -5,12 +5,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
     overflow-x: hidden;
     position: relative;
-    padding: 40px 20px 80px 20px;
+    padding: 20px 20px 100px 20px;
     box-sizing: border-box;
 }
 
@@ -47,15 +48,15 @@ h1 {
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1); 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     z-index: 1;
 }
 
 .button-container {
-    background: rgba(20, 20, 20, 0.6); 
+    background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08); 
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 35px;
     width: 100%;
@@ -68,7 +69,7 @@ h1 {
 }
 
 button {
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 16px 20px;
@@ -99,13 +100,13 @@ button:hover {
 }
 
 .student-card {
-    background: rgba(20, 20, 20, 0.6); 
+    background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 20px;
     color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
@@ -163,7 +164,7 @@ button:hover {
 .progress-fill {
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .fill-leaves {
@@ -184,7 +185,7 @@ button:hover {
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 15px;
+    padding: 15px 15px calc(15px + env(safe-area-inset-bottom)) 15px;
     background: rgba(20, 20, 20, 0.4);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -211,8 +212,8 @@ button:hover {
 .timetable-img {
     width: 100%;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .mini-btn {
@@ -227,14 +228,22 @@ button:hover {
     border: 1px solid #ff416c;
     color: #ff416c;
 }
-.mini-btn.red:hover { background: #ff416c; color: white; }
+
+.mini-btn.red:hover {
+    background: #ff416c;
+    color: white;
+}
 
 .mini-btn.green {
     background: rgba(56, 239, 125, 0.2);
     border: 1px solid #38ef7d;
     color: #38ef7d;
 }
-.mini-btn.green:hover { background: #38ef7d; color: black; }
+
+.mini-btn.green:hover {
+    background: #38ef7d;
+    color: black;
+}
 
 .modal-overlay {
     display: none;
@@ -259,7 +268,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     animation: popIn 0.3s ease;
 }
 
@@ -271,8 +280,14 @@ button:hover {
 }
 
 @keyframes popIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .profile-header-bar {
@@ -309,7 +324,7 @@ button:hover {
 .roll-badge {
     font-size: 0.75rem;
     color: #aaa;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 2px 8px;
     border-radius: 10px;
     margin-top: 4px;
@@ -332,7 +347,7 @@ button:hover {
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 15px rgba(255,255,255,0.2);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     margin: 5px 0 10px 0;
 }
 
@@ -349,23 +364,43 @@ button:hover {
     font-size: 0.85rem;
     font-weight: bold;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     cursor: pointer;
     transition: 0.1s;
     white-space: nowrap;
 }
 
-.ctrl-btn:active { transform: scale(0.95); }
+.ctrl-btn:active {
+    transform: scale(0.95);
+}
 
-.ctrl-btn.blue { background: rgba(59, 130, 246, 0.2); border-color: #3b82f6; }
-.ctrl-btn.blue:hover { background: #3b82f6; }
+.ctrl-btn.blue {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+}
 
-.ctrl-btn.green { background: rgba(16, 185, 129, 0.2); border-color: #10b981; }
-.ctrl-btn.green:hover { background: #10b981; }
+.ctrl-btn.blue:hover {
+    background: #3b82f6;
+}
 
-.ctrl-btn.red { background: rgba(239, 68, 68, 0.2); border-color: #ef4444; }
-.ctrl-btn.red:hover { background: #ef4444; }
+.ctrl-btn.green {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+}
+
+.ctrl-btn.green:hover {
+    background: #10b981;
+}
+
+.ctrl-btn.red {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+.ctrl-btn.red:hover {
+    background: #ef4444;
+}
 
 .table-container {
     width: 100%;
@@ -402,7 +437,7 @@ td {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: default;
 }
@@ -442,8 +477,12 @@ td:hover {
 }
 
 @keyframes pulse {
-    from { box-shadow: 0 0 5px #00c6ff, inset 0 0 5px #00c6ff; }
-    to { box-shadow: 0 0 20px #00c6ff, inset 0 0 10px #00c6ff; }
+    from {
+        box-shadow: 0 0 5px #00c6ff, inset 0 0 5px #00c6ff;
+    }
+    to {
+        box-shadow: 0 0 20px #00c6ff, inset 0 0 10px #00c6ff;
+    }
 }
 
 .active-day-row td {
@@ -469,7 +508,7 @@ td:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
 }
 
@@ -495,9 +534,18 @@ td:hover {
 }
 
 @keyframes blink {
-    0% { opacity: 1; box-shadow: 0 0 5px #ff0000; }
-    50% { opacity: 0.3; box-shadow: none; }
-    100% { opacity: 1; box-shadow: 0 0 5px #ff0000; }
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 5px #ff0000;
+    }
+    50% {
+        opacity: 0.3;
+        box-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 5px #ff0000;
+    }
 }
 
 .digital-clock {
@@ -505,7 +553,7 @@ td:hover {
     font-size: 1.1rem;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .main-status-text {
@@ -516,6 +564,17 @@ td:hover {
     transition: color 0.3s ease;
 }
 
-.status-active { color: #00c6ff; text-shadow: 0 0 15px #00c6ff; }
-.status-break { color: #f59e0b; text-shadow: 0 0 15px #f59e0b; }
-.status-free { color: #10b981; text-shadow: 0 0 15px #10b981; }
+.status-active {
+    color: #00c6ff;
+    text-shadow: 0 0 15px #00c6ff;
+}
+
+.status-break {
+    color: #f59e0b;
+    text-shadow: 0 0 15px #f59e0b;
+}
+
+.status-free {
+    color: #10b981;
+    text-shadow: 0 0 15px #10b981;
+}
